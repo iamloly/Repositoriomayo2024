@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="estiloservicios.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Portafolio de Lorraine M., Diseñadora, Programadora Web y Fotógrafa.">
+        <meta name="keywords" content="diseño, programación web, fotografía, branding, desarrollo web">
+        <title>Portfolio - Lorraine M.</title>
+        <link rel="icon" href="assets/circulodecolor.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="estilo.css">
+    </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -69,7 +72,8 @@
             </div>
         </section>
     </main>
-    <footer class="bg-dark text-white text-center py-3">
+
+     <footer class="bg-dark text-white text-center py-3">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <ul class="navbar-nav mx-auto">
@@ -88,38 +92,10 @@
         </p>
         <p>&copy; 2024 Lorraine M. Todos los derechos reservados.</p>
     </footer>
-    
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const navbarLinks = document.querySelectorAll('.navbar-nav .nav-link, footer .nav-link');
-    
-            navbarLinks.forEach(link => {
-                link.addEventListener('click', function (e) {
-                    const targetId = this.getAttribute('href');
-                    
-                    if (targetId.startsWith('#')) {
-                        e.preventDefault();
-                        const targetElement = document.querySelector(targetId);
-    
-                        if (targetElement) {
-                            const headerHeight = document.querySelector('header').offsetHeight;
-                            const targetPosition = targetElement.getBoundingClientRect().top;
-                            const offsetPosition = targetPosition - (window.innerHeight - targetElement.offsetHeight) / 2 - headerHeight;
-    
-                            window.scrollBy({
-                                top: offsetPosition,
-                                behavior: 'smooth'
-                            });
-                        }
-                    }
-                });
-            });
-        });
-    </script>
-    
-    </body>
-    </html>
+    <script src="scripts.js"></script>
+</body>
+</html>
